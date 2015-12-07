@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+
+    <style type="text/css">
+        /* This activity will guide you through static/relative/absolute/fixed positioning  */
+        /* ---read--- the lowercase comments */
+        /* ----DO---- THE UPPERCASE comments */
+        
+        /* important: you will only be modifying HTML. Do not edit the CSS.  */
+        /* OBSERVE the classes below.  They apply to the <div>s in the HTML. So READ the HTML too. */
+        
+        .pink {
+            background-color: pink;
+            height: 200px;
+            width: 400px;
+        }
+        
+        .red {
+            background-color: red;
+            height: 400px;
+            width: 400px;
+        }
+        
+        .blue {
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+        }
+        
+        .green {
+            background-color: green;
+            height: 600px;
+            width: 400px;
+        }
+        /* STOP!!! Did you OBSERVE the existing HTML & CSS first? */
+        /* APPLY THE STATIC CLASS TO THE BLUE BOX. You can do this by separating classes with a space */
+        /* Example: <div class="blue static"> */
+        /* Static positioning is the default positioning for the element. Nothing should change! */
+        
+        .static {
+            position: static;
+        }
+        /* REPLACE THE STATIC CLASS WITH THE RELATIVE CLASS. */
+        /* Relative positioning moves the element in relation to its default positioning (where it was with static positioning). It's a simple translation (like in Geometry). */
+        /* Relative positioning does not change the "flow" of the elements. In other, words, other elements will remember where the blue square was initially positioned, so it doesn't lose it's "spot." */
+        
+        .relative {
+            position: relative;
+            top: 200px;
+            left: 500px;
+        }
+        /* REPLACE THE RELATIVE CLASS WITH THE ABSOLUTE CLASS */
+        /* Absolute positioning will position an element in relation to the closest parent that has either relative, absolute, or fixed positioning.
+/* Because the blue square is not inside a positioned element, it will be positioned in relation to the browser window.  */
+        /* APPLY THE RELATIVE CLASS TO THE RED SQUARE, and you should NOTICE that the blue square is now positioned relative to the red square, and the red square is positioned relative to its original position. */
+        /* CHANGE THE RED SQUARE'S POSITIONING CLASS TO ABSOLUTE, and you should NOTICE that the blue square's position in the red square remained the same, but the red square is now positioned in relation to the browser window. */
+        /* With absolute positioning, other elements will no longer be aware of the element's initial position and their positioning will change accordingly (like the <p> tag below the blue square). In other words, the element will be taken out of the "flow" and other elements will be scooted up and/or over. */
+        
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+        /* REMOVE THE ABSOLUTE CLASSES, AND APPLY THE FIXED CLASS TO THE BLUE SQUARE */
+        /* Fixed positioning will position an element in relation to the browser window, and it will not move, even if you scroll on the page. */
+        /* With fixed positioning, other elements will no longer be aware of the element's initial position and their positioning will change accordingly (like the <p> tag below the blue square). */
+        
+        .fixed {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pink"></div>
+    <div class="red">
+        <div class="blue"></div>
+        <p>Kitty ipsum dolor sit amet, meow feed me hiss puking stretching sunbathe, catnip stretching give me fish tail flick. Biting judging you judging you jump on the table chase the red dot claw.</p>
+    </div>
+    <div class="green"></div>
+</body>
+
+</html>
